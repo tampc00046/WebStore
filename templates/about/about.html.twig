@@ -1,12 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
 
-    </head>
-<body>
-    
-    {# <div style="text-align: center"><img src="images/logo.png" alt="BTEC" height="130px"></div> #}
-    <div style="text-align:justify; padding: 1% 6%">
+{% extends 'base.html.twig' %}
+
+{% block title %}Register{% endblock %}
+{% block body %}
+    <div style="text-align:justify; padding: 40% 6%">
         <span style="color: #fa6e4f;">GIỚI THIỆU CỬA HÀNG MÔ HÌNH FIGURE</span> 
         <br>
         Với phương châm kinh doanh hài lòng trước nhận tiền sau, Mô Hình Figure luôn cố gắng mang lại giá sản phẩm ổn định và đảm bảo có nguồn hàng sẵn cho quý khách hàng. Cố gắng vì khách hàng là động lực để cửa hàng cố gắng phát triển
@@ -44,10 +41,54 @@
         <li>Với các đơn hàng trên website shop sẽ gọi điện xác nhận đơn hàng và báo phí ship cho khách hàng,hàng sẽ được khi sau khi khách đồng ý với phí ship.</li>
         <li>Ship hàng COD toàn quốc, chuyển phát nhanh phí hợp lý.</li>
         </ul>
-        
     </div>
-</body>
-<footer>
     
-</footer>
+    <div class="footer_section layout_padding">
+        <div class="container">
+           <div class="footer_logo"><a href="app_layout"><img src="images/fairytail2.png"></a></div>
+           <div class="input_bt">
+              <input type="text" class="mail_bt" placeholder="Your Email" name="Your Email">
+              <span class="subscribe_bt" id="basic-addon2"><a href="#">Subscribe</a></span>
+           </div>
+           <div class="footer_menu">
+              <ul>
+                 <li><a href="#">Best Sellers</a></li>
+                 <li><a href="#">Gift Ideas</a></li>
+                 <li><a href="#">New Releases</a></li>
+                 <li><a href="#">Today's Deals</a></li>
+                 <li><a href="#">Customer Service</a></li>
+              </ul>
+           </div>
+           <div class="location_main">Help Line  Number : <a href="#">+1 1800 1200 1200</a></div>
+        </div>
+     </div>
+     <!-- footer section end -->
+     <!-- copyright section start -->
+     <div class="copyright_section">
+        <div class="container">
+           <p class="copyright_text">© 2020 All Rights Reserved. Design by <a href="https://html.design">Free html  Templates</a></p>
+        </div>
+     </div>
+     <!-- copyright section end -->
+     <!-- Javascript files-->
+     <script src="js/jquery.min.js"></script>
+     <script src="js/popper.min.js"></script>
+     <script src="js/bootstrap.bundle.min.js"></script>
+     <script src="js/jquery-3.0.0.min.js"></script>
+     <script src="js/plugin.js"></script>
+     <!-- sidebar -->
+     <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+     <script src="js/custom.js"></script>
+     <script>
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "250px";
+        }
+        
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+        }
+     </script>
+  </body>
 </html>
+{% endblock %}
+{% block footer %} {% endblock %}

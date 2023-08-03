@@ -1,0 +1,62 @@
+{# {% extends 'base.html.twig' %} #}
+
+{% block title %}{% endblock %}
+{% block stylesheets %}
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+<!-- Google Fonts Roboto -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
+<!-- MDB -->
+<link rel="stylesheet" href="/css/mdb.min.css" />
+<!-- Custom styles -->
+<link rel="stylesheet" href="/css/admin.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js" integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw=="
+  crossorigin="anonymous"></script>
+{% endblock %}
+{% block body %}
+    <div class="container">
+        <table class="table mt-5">
+            <thead>
+                <tr>
+                    <td>STT</td>
+                    <td>ID Product</td>
+                    <td>Image </td>
+                    <td>Product name</td>
+                    <td>Price</td>
+                    <td>Action</td>
+                </tr>
+            </thead>
+            <tbody>
+                {% for sp in data %}
+                    <tr>
+                        <td>{{loop.index}}</td>
+                        <td>{{sp.getId()}}</td>
+                        <td><img src="{{asset('uploads/' ~ sp.getImage())}}" height="100" /></td>
+                        <td>{{sp.getName()}}</td>
+                        <td>{{sp.getPrice()}}</td>
+                        <td>
+                            <a href="{{path('app_edit_san_pham',{'id':sp.getId()})}}" class="btn btn-warning">Edit</a>
+                            <a href="javascript:deletesp('{{path('app_delete_san_pham',{'id':sp.getId()})}}')" class="btn btn-danger">Delete</a>  
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}
+{% block javascripts %}
+    <script>
+        function deletesp(url){
+            if(confirm("Do you delete product?")){
+                window.location.href = url;
+            }
+        }
+    </script>
+
+    {% if message is not empty %}
+        <script>
+            alert("{{message}}");
+            window.location.href = "{{path('list_product')}}";
+        </script>
+    {% endif %}
+
+{% endblock %}
