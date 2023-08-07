@@ -32,5 +32,5 @@ class FileUploader
     public function getTargetDirectory(): string
     {
         return $this->targetDirectory;
-    }
+    }    
 }

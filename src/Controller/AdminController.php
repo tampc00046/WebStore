@@ -101,6 +101,6 @@ class AdminController extends AbstractController
         $em->flush();
         return new RedirectResponse($this->urlGenerator->generate('list_product'));
     }
-}
+}   
 
 
