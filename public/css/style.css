@@ -953,5 +953,37 @@ input.mail_bt::placeholder {
     margin-top: 90px;
 }
 
-
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 5px;
+  }
+  
+  /* Màu nền và màu chữ cho nút "Add" */
+  .add-button {
+    background-color: #2ecc71;
+    color: white;
+  }
+  
+  /* Màu nền và màu chữ cho nút "Delete" */
+  .delete-button {
+    background-color: #e74c3c;
+    color: white;
+  }
+  
+  /* Màu nền và màu chữ cho nút "Edit" */
+  .edit-button {
+    background-color: #3498db;
+    color: white;
+  }
+  
+  /* Màu nền và màu chữ cho nút "Xóa" */
+  .xoa-button {
+    background-color: #9b59b6;
+    color: white;
+  }
 /* copyright section end */

@@ -13,6 +13,31 @@
   crossorigin="anonymous"></script>
 {% endblock %}
 {% block body %}
+<header>
+    <!-- Sidebar -->
+    <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse bg-white">
+      <div class="position-sticky">
+        <div class="list-group list-group-flush mx-3 mt-4">
+            <a href="#" class="list-group-item list-group-item-action py-2 ripple" aria-current="true">
+                <i class="fas fa-tachometer-alt fa-fw me-3"></i><span>List Product</span>
+                <a href="{{path('addpd')}}" class="list-group-item list-group-item-action py-2 ripple" aria-current="true">
+                  <i></i><span>Edit Product</span>
+                </a>
+          </a>
+          <a href="#" class="list-group-item list-group-item-action py-2 ripple ">
+            <i class="fas fa-chart-area fa-fw me-3"></i><span>User </span>
+          </a>
+          <a href="#" class="list-group-item list-group-item-action py-2 ripple"><i
+              class="fas fa-lock fa-fw me-3"></i><span>Contact</span></a>
+          <a href="#" class="list-group-item list-group-item-action py-2 ripple"><i
+              class="fas fa-chart-line fa-fw me-3"></i><span>Orders</span></a>
+          <a href="#" class="list-group-item list-group-item-action py-2 ripple">
+            <i class="fas fa-chart-pie fa-fw me-3"></i><span>Order Detail</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+    
     <div class="container">
         <table class="table mt-5">
             <thead>
@@ -37,10 +62,14 @@
                             <a href="{{path('app_edit_san_pham',{'id':sp.getId()})}}" class="btn btn-warning">Edit</a>
                             <a href="javascript:deletesp('{{path('app_delete_san_pham',{'id':sp.getId()})}}')" class="btn btn-danger">Delete</a>  
                         </td>
-                    </tr>
+                    </tr> 
                 {% endfor %}
             </tbody>
+             
         </table>
+        <ul>
+            <a href="{{path('addpd')}}" class="btn btn-warning"; style="margin-left: 20px;">Add Product</a>
+        </ul>
     </div>
 {% endblock %}
 {% block javascripts %}

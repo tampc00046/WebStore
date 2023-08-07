@@ -4,7 +4,7 @@
 {% block title %}Contact{% endblock %}
 
 {% block body %}
-    <div class="container">
+    <div class="container" style="text-align:justify; padding: 40% 6%">
         {{form_start(form)}}
         {{form_widget(form)}}
         {# <input type="submit" value="Submit" class="btn btn-primary" /> #}
@@ -25,6 +25,32 @@
         document.querySelector("form").addEventListener("submit", showSuccessMessage);
     </script>
     </div>
+    <div class="footer_section layout_padding">
+      <div class="container">
+         <div class="footer_logo"><a href="app_layout"><img src="images/fairytail2.png"></a></div>
+         <div class="input_bt">
+            <input type="text" class="mail_bt" placeholder="Your Email" name="Your Email">
+            <span class="subscribe_bt" id="basic-addon2"><a href="#">Subscribe</a></span>
+         </div>
+         <div class="footer_menu">
+            <ul>
+               <li><a href="layout">Home</a></li>
+               <li><a href="#">Product</a></li>
+               <li><a href="about">About us</a></li>
+               <li><a href="#">Contact</a></li>
+               <li><a href="#">Register</a></li>
+            </ul>
+         </div>
+         <div class="location_main">Help Line  Gmail : <a href="#">tampcbc00046@gmail.com</a></div>
+      </div>
+   </div>
+   <!-- footer section end -->
+   <!-- copyright section start -->
+   <div class="copyright_section">
+      <div class="container">
+         <p class="copyright_text">© 2020 All Rights Reserved. Design by <a href="">Pham Tam</a></p>
+      </div>
+   </div>
 {% endblock %}
 
     
